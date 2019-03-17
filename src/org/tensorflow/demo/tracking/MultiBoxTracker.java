@@ -42,7 +42,7 @@ import org.tensorflow.demo.env.Logger;
  */
 public class MultiBoxTracker {
 
-  public int count = 0;
+  private int count = 0;
 
   private final Logger logger = new Logger();
 
@@ -417,4 +417,8 @@ public class MultiBoxTracker {
         recogToReplace != null ? recogToReplace.color : availableColors.poll();
     trackedObjects.add(trackedRecognition);//加入跟踪list
   }
+
+    public int getCount() {
+        return count;
+    }
 }

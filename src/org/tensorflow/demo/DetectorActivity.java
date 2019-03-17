@@ -303,7 +303,7 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
                     }
                 }
                 tracker.trackResults(mappedRecognitions, luminanceCopy, currTimestamp);//tracker为MultiBoxTracker类，调用trackResults方法比对检测对象和跟踪过的对象
-                num = (tracker.count);//获得当前行人计数值
+                num = (tracker.getCount());//获得当前行人计数值
                   runOnUiThread(new Runnable() {
                       @Override
                       public void run() {
