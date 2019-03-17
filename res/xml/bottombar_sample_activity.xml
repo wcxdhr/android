@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tab
+        icon="@drawable/ic_download"
+        id="@+id/tab1"
+        title="下载模型"
+        app:bb_behavior="shifting"
+        inActiveColor="#D3E6F0"
+        activeColor="#86BBD8"
+        barColorWhenSelected="#E9F2F7"/>
+    <tab
+        icon="@drawable/ic_person"
+        id="@+id/tab2"
+        title="行人计数"
+        app:bb_behavior="shifting"
+        inActiveColor="#D3E6F0"
+        activeColor="#86BBD8"
+        barColorWhenSelected="#E9F2F7"/>
+</tabs>

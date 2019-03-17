@@ -1,0 +1,4 @@
+#Sun May 27 15:51:06 CST 2018
+base.0=D\:\\Study\\AS\\android\\gradleBuild\\intermediates\\transforms\\dex\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex
