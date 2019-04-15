@@ -36,6 +36,7 @@
         android:value="25.3.0" />
 
     <application
+        android:name="org.tensorflow.demo.MyApplication"
         android:allowBackup="true"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"

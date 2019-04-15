@@ -16,6 +16,7 @@ limitations under the License.
 package org.tensorflow.demo.tracking;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
@@ -32,6 +33,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import org.tensorflow.demo.Classifier.Recognition;
+import org.tensorflow.demo.MyApplication;
+import org.tensorflow.demo.R;
 import org.tensorflow.demo.env.BorderedText;
 import org.tensorflow.demo.env.ImageUtils;
 import org.tensorflow.demo.env.Logger;
@@ -186,9 +189,12 @@ public class MultiBoxTracker {
       boxPaint.setColor(recognition.color);
 
       final float cornerSize = Math.min(trackedPos.width(), trackedPos.height()) / 8.0f;
-      canvas.drawRoundRect(trackedPos, cornerSize, cornerSize, boxPaint);
+//      canvas.drawRoundRect(trackedPos, cornerSize, cornerSize, boxPaint);
+        /**图片替换识别对象（注：图片太大会造成内存溢出**/
+        canvas.drawBitmap(BitmapFactory.decodeResource(MyApplication.getContext().getResources(), R.drawable.ic_launcher), null, trackedPos, boxPaint);
 
-      final String labelString =
+
+        final String labelString =
           !TextUtils.isEmpty(recognition.title)
               ? String.format("%s %.2f", recognition.title, recognition.detectionConfidence)
               : String.format("%.2f", recognition.detectionConfidence);
